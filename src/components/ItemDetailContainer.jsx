@@ -27,7 +27,7 @@ export default function ItemDetailContainer() {
       }, [id]);
 
   return (
-    <div className="flex flex-wrap w-4/5">
+    <div className="flex flex-wrap">
                 <ItemDetail pintura={item} />
     </div>
   );

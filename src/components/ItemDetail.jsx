@@ -6,8 +6,8 @@ export default function ItemDetail({ pintura }) {
     
     return (
         <div className="h-4/5 w-full m-4 flex p-4 rounded-md shadow-md user-card group bg-slate-300">
-                <div className="h-4/5 rounded-md">
-                    <img src={images} alt="" className="rounded-3xl"  />
+                <div className="h-full rounded-md">
+                    <img src={images} alt="" className="rounded-3xl h-full"   />
                 </div>
                 <div className="h-full w-2/4 flex flex-col items-center">
                     <h1 className="w-full m-0 font-thin text-5xl text-center ">{title}</h1>
