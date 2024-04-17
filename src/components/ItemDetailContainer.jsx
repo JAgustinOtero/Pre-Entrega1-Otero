@@ -5,7 +5,7 @@ import ItemDetail from "./ItemDetail";
 
 export default function ItemDetailContainer() {
 
-  const [arte, setArte] = useState([]);
+  const [item, setIrte] = useState([]);
   const { id } = useParams();
 
     useEffect(() => {
@@ -18,7 +18,7 @@ export default function ItemDetailContainer() {
           return res.json();
         })
         .then((res) => {
-          setArte(res)
+          setIrte(res)
         })
         .catch((err) => {
           console.log(err);
@@ -27,8 +27,8 @@ export default function ItemDetailContainer() {
       }, [id]);
 
   return (
-    <div className="flex flex-wrap">
-                <ItemDetail pintura={arte} />
+    <div className="flex flex-wrap w-4/5">
+                <ItemDetail pintura={item} />
     </div>
   );
 }

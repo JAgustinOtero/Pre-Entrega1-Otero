@@ -7,7 +7,7 @@ export default function ItemListContainer({ items }) {
   const { id } = useParams();
 
   return (
-    <div className="flex flex-wrap">
+    <div className="flex flex-wrap w-4/5">
       {items.map((elm) => {
         if (elm.category.id == id || id == undefined) 
         return <ItemList key={elm.id} pintura={elm} />;

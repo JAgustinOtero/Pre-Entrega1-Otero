@@ -8,7 +8,7 @@ import "./App.css"
 
 function App() {
 
-  const [artes, setArtes] = useState([]);
+  const [list, setList] = useState([]);
   const  [categories, setCategories] = useState([]);
   const { id } = useParams();
   let category_aux_id = [];
@@ -22,7 +22,7 @@ function App() {
   useEffect(() => {
     let pedido;
 
-    pedido = fetch("https://api.escuelajs.co/api/v1/products");
+    pedido = fetch("https://api.escuelajs.co/api/v1/products?offset=0&limit=51");
 
     pedido
       .then((res) => {
@@ -36,8 +36,7 @@ function App() {
           }
         });
         setCategories(categories_aux)
-        setArtes(res);
-        console.log(categories_aux)
+        setList(res);
       })
       .catch((err) => {
         console.log(err);
@@ -48,7 +47,7 @@ function App() {
     <>
     <BrowserRouter>
     <Header elements={categories}/>
-    <Main objects={artes} />
+    <Main objects={list} />
     <Footer/>
     </BrowserRouter>
     </>

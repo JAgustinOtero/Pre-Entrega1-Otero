@@ -7,7 +7,7 @@ export default function Main( {objects} )
 {
     const {id} = useParams()
     return(
-        <main>
+        <main className="flex justify-center bg-slate-200">
         {/* PAGINACION */}
 
             <Routes>

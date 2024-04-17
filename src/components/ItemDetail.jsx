@@ -1,6 +1,4 @@
-import CarouselDefault from "./CarouselDefault.jsx";
 import { Button } from "flowbite-react";
-
 
 export default function ItemDetail({ pintura }) {
 
