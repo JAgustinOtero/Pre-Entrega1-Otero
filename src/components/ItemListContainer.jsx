@@ -1,8 +1,17 @@
-export default function ItemListContainer({greeting}){
-    return(
-        <div className=" h-full w-full flex items-center justify-center">
-            <p className="text-5xl">{greeting}</p>
-        </div>
+import { useEffect } from "react";
+import { useState } from "react";
+import { useParams } from "react-router-dom";
+import ItemList from "./ItemList";
 
-    );
+export default function ItemListContainer({ items }) {
+  const { id } = useParams();
+
+  return (
+    <div className="flex flex-wrap">
+      {items.map((elm) => {
+        if (elm.category.id == id || id == undefined) 
+        return <ItemList key={elm.id} pintura={elm} />;
+      })}
+    </div>
+  );
 }

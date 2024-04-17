@@ -1,21 +1,30 @@
-import Brand from "./Brand"
-import CartWidget from "./CartWidget"
+import Brand from "./Brand";
+import { useEffect, useState } from "react";
+import CartWidget from "./CartWidget";
+import { Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
+export default function Navbar({elements}) {
+  const { id } = useParams();
 
-export default function Navbar()
-{
-    return(
-        <nav className="flex w-full h-full">
-            <Brand/>
-            <div className="w-7/12 flex text-base">
-                <ul className="flex justify-around items-center w-full">
-                    <li><a href="">Impresoras3D</a></li>
-                    <li><a href="">Servicio de Impresion</a></li>
-                    <li><a href="">Componentes</a></li>
-                    <li><a href="">Contacto</a></li>
-                </ul>
-            </div>
-            <CartWidget items="4"></CartWidget>
-        </nav>
-    )
+  console.log(elements)
+
+  return (
+    <nav className="flex w-full h-full">
+      <Link
+        to={"/"}
+        className="flex justify-center align-middle items-center w-3/12"
+      >
+        <Brand />
+      </Link>
+      <div className="w-7/12 flex text-base">
+        <ul className="flex justify-around items-center w-full">
+        {elements.map((elm) => {
+          return <Link key={elm.cat_id} to={"/categories/" + elm.cat_id}>{elm.name}</Link>;
+        })}
+        </ul>
+      </div>
+      <CartWidget items="4"></CartWidget>
+    </nav>
+  );
 }
