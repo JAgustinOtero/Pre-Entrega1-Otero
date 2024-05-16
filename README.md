@@ -1,4 +1,4 @@
-# Tienda de Ropa con React
+# Tienda de Ropa
 
 Este es un proyecto de ejemplo de una tienda de ropa desarrollada con React. La aplicación ofrece una experiencia de usuario interactiva para explorar y comprar productos de moda.
 
