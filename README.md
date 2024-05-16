@@ -1,8 +1,19 @@
-# React + Vite
+# Tienda de Ropa con React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este es un proyecto de ejemplo de una tienda de ropa desarrollada con React. La aplicación ofrece una experiencia de usuario interactiva para explorar y comprar productos de moda.
 
-Currently, two official plugins are available:
+## Características
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Interfaz de usuario intuitiva y atractiva.
+- Filtrado de productos por categorías
+- Visualización detallada de productos con imágenes, descripciones y precios.
+- Funcionalidad de carrito de compras para agregar y gestionar productos seleccionados.
+- Integración con API para obtener datos de productos.
+
+## Tecnologías Utilizadas
+
+- React: Biblioteca de JavaScript para construir interfaces de usuario.
+- React Router: Para la navegación dentro de la aplicación.
+- Firebase Cloud: Librería de componentes.
+- Toastify: Libreria de Toast Personalizados.
+
